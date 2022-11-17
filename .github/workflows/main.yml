@@ -76,7 +76,7 @@ jobs:
           # Если ваш ssh-ключ защищён фразой-паролем
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull mansyl/infra_project
+            sudo docker pull mansyl/infra_project:latest 
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 mansyl/infra_project
+            sudo docker run --rm -d -p 5000:5000 mansyl/infra_project:latest 
